@@ -1,0 +1,66 @@
+#pip install -U apache-airflow
+#pandas
+#pandas_gbq
+# setuptools<58.0.0
+numpy==1.22.0
+pyarrow>=7.0.0
+pandas==2.0.3
+pandas_gbq==0.17.3
+#flower
+# statsd
+#importlib-metadata>=4.8.3
+#apache-airflow[statsd]
+#################################
+apache-airflow-providers-oracle==3.8.0
+cx_Oracle==8.3.0
+#################################
+# google-cloud-translate
+# google-api-core
+# google-cloud-storage
+# google-cloud-bigquery
+# google-api-python-client
+# google-auth
+# google-auth-httplib2
+#################################
+google-cloud-translate == 3.11.0
+google-api-core == 2.11.0
+google-cloud-storage == 2.8.0
+google-cloud-bigquery == 2.33.0
+google-api-python-client == 1.12.11
+google-auth == 2.14.1
+google-auth-httplib2 ==  0.1.1
+google-auth-oauthlib == 0.4.1
+# apache-airflow-providers-google == 10.9.0
+google-cloud-core == 2.3.3
+google-resumable-media == 2.3.2
+googleapis-common-protos == 1.56.2
+###########################################
+requests>=2.31.0
+# psycopg2-binary
+#pytz>=2023.1
+#apache-airflow-providers-mysql
+# mysqlclient
+#celery==5.0.3
+#django-celery
+#pandas
+#pandas_gbq
+#flower
+#airflow-kube-base-operator
+pymongo==4.3.3
+#apache-airflow[all]
+#BeautifulSoup4
+# boto3
+#flask-appbuilder==3.4.5
+# celery==5.1.2
+#vine<6.0
+#celery[rabbitmq]==5.1.2
+#############################################
+psutil>=5.9.0
+memory-profiler>=0.61.0
+yfinance>=0.2.30
+multitasking>=0.0.12
+#####################OCR
+selenium==4.34.2
+pdf2image==1.17.0
+pytesseract==0.3.13
+pdfplumber==0.11.6
