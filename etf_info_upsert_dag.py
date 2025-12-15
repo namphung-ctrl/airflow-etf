@@ -11,7 +11,7 @@ from etf_info_etl_scripts.etf_info_logic import crawl_jpx_data, add_yield_to_df,
     dag_id='daily_etf_info_data_upsert',
     start_date=days_ago(1),
     # Chạy hàng ngày lúc 1 giờ sáng (DANG NONE-KHONGCHAY)
-    schedule_interval=None, 
+    schedule_interval='0 1 * * *',
     catchup=False,
     tags=['etl', 'jpx', 'finance'],
     default_args={'owner': 'airflow', 'retries': 1}
@@ -48,4 +48,5 @@ def etf_etl_pipeline():
     task_load_data(final_df_json)
 
 # Khởi tạo DAG
+
 etf_upsert_dag = etf_etl_pipeline()
