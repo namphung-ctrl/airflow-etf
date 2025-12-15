@@ -10,7 +10,7 @@ from etf_info_etl_scripts.etf_historical_price_logic import transform_price_data
 @dag(
     dag_id='daily_etf_historical_price_data_upsert',
     start_date=days_ago(1),
-    schedule=None,
+    schedule_interval='0 1 * * *',
     catchup=False,
     tags=['etf', 'price', 'history'],
 )
@@ -51,4 +51,5 @@ def etf_price_history_pipeline():
     load_task(processed_df_json)
 
 # Khởi tạo DAG
+
 etf_price_dag = etf_price_history_pipeline()
