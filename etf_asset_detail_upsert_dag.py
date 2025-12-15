@@ -14,7 +14,7 @@ from etf_info_etl_scripts.etf_asset_detail_logic import (
 @dag(
     dag_id='daily_etf_asset_detail_data_insert',
     start_date=days_ago(1),
-    schedule=None,
+    schedule_interval='0 1 * * *',
     catchup=False,
     tags=['etf', 'asset', 'daily'],
 )
@@ -49,4 +49,5 @@ def etf_asset_detail_pipeline():
     load_task(processed_df)
 
 # Khởi tạo DAG
+
 etf_asset_detail_pipeline()
