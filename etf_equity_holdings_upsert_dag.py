@@ -11,7 +11,7 @@ from etf_info_etl_scripts.etf_equity_holdings_logic import extract_transform_loa
 @dag(
     dag_id='daily_etf_equity_holdings_data_upsert',
     start_date=dates.days_ago(1),
-    schedule="@daily",
+    schedule_interval='0 1 * * *',
     catchup=False,
     tags=['etf', 'valuation', 'selenium'],
 )
@@ -31,4 +31,5 @@ def etf_valuation_pipeline():
     run_etl_load()
 
 # Khởi tạo DAG
+
 etf_valuation_dag = etf_valuation_pipeline()
