@@ -11,7 +11,7 @@ from etf_info_etl_scripts.etf_sector_logic import extract_transform_load_sector_
 @dag(
     dag_id='daily_etf_sector_data_upsert',
     start_date=dates.days_ago(1),
-    schedule="@daily",
+    schedule_interval = '0 1 * * *',
     catchup=False,
     tags=['etf', 'sector', 'selenium'],
 )
@@ -32,4 +32,5 @@ def etf_sector_pipeline():
     run_etl_load()
 
 # Khởi tạo DAG
+
 etf_sector_dag = etf_sector_pipeline()
